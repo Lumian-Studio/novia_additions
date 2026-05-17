@@ -1,0 +1,8 @@
+{
+    "targets": [
+        "novia_additions:deepslate_novium_ore"
+    ],
+    "append": [
+        "novia_additions:block/novium_ore_overlay"
+    ]
+}

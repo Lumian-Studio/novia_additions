@@ -1,0 +1,14 @@
+{
+    "music_disc.revolution": {
+        "sounds": [
+            "novia_additions:records/revolution"
+        ],
+        "stream": true
+    },
+    "music_disc.evolution": {
+        "sounds": [
+            "novia_additions:records/evolution"
+        ],
+        "stream": true
+    }
+}

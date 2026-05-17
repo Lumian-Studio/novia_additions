@@ -1,0 +1,8 @@
+{
+    "targets": [
+        "novia_additions:end_stone_demurium_ore"
+    ],
+    "append": [
+        "novia_additions:block/demurium_ore_overlay"
+    ]
+}

@@ -1,0 +1,19 @@
+[versions]
+# Libs
+lombok   = '1.18.46'
+jspecify = '1.0.0'
+
+# Mods
+fusion    = "7471474"
+worldedit = "5830452"
+excompass = "7892943"
+
+[libraries]
+# Libs
+jspecify = { module = "org.jspecify:jspecify",    version.ref = "jspecify" }
+lombok   = { module = "org.projectlombok:lombok", version.ref = "lombok"   }
+
+# Mods
+mod-fusion    = { module = "curse.maven:fusion-854949",            version.ref = "fusion"    }
+mod-worldedit = { module = "curse.maven:worldedit-225608",         version.ref = "worldedit" }
+mod-excompass = { module = "curse.maven:explorers-compass-491794", version.ref = "excompass" }
