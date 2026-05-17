@@ -1,0 +1,59 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "bonus_rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 2.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:netherite_ingot",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:tag",
+          "expand": true,
+          "name": "novia_additions:music_discs",
+          "weight": 30
+        },
+        {
+          "type": "minecraft:item",
+          "name": "novia_additions:novium_pellet",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 3.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "novia_additions:demurium_crystal",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:item",
+          "name": "novia_additions:demithrium_ingot"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "novia_additions:spawners/demithril_shrine/rare"
+}

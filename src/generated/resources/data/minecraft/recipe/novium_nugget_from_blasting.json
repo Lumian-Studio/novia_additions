@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.5,
+  "ingredient": [
+    {
+      "item": "novia_additions:novium_pickaxe"
+    },
+    {
+      "item": "novia_additions:novium_axe"
+    },
+    {
+      "item": "novia_additions:novium_hoe"
+    },
+    {
+      "item": "novia_additions:novium_shovel"
+    },
+    {
+      "item": "novia_additions:novium_sword"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "novia_additions:novium_nugget"
+  }
+}

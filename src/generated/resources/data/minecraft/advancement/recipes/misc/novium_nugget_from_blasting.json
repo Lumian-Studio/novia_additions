@@ -1,0 +1,76 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_novium_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "novia_additions:novium_axe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_novium_hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "novia_additions:novium_hoe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_novium_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "novia_additions:novium_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_novium_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "novia_additions:novium_shovel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_novium_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "novia_additions:novium_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:novium_nugget_from_blasting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_novium_pickaxe",
+      "has_novium_axe",
+      "has_novium_hoe",
+      "has_novium_shovel",
+      "has_novium_sword"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:novium_nugget_from_blasting"
+    ]
+  }
+}

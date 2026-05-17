@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/template_music_disc",
+  "textures": {
+    "layer0": "novia_additions:item/music_disc_evolution"
+  }
+}

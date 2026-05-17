@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#novia_additions:has_ore/novium",
+  "features": "#novia_additions:ores/overworld",
+  "step": "underground_ores"
+}

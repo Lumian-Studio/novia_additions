@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_novium_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "novia_additions:novium_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:novium_leggings_smithing"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_novium_ingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:novium_leggings_smithing"
+    ]
+  }
+}

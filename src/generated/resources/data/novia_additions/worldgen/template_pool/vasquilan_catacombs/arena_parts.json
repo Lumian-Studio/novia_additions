@@ -1,0 +1,195 @@
+{
+  "elements": [
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "novia_additions:vasquilan_catacombs/arena/labyrinth",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:rule",
+              "rules": [
+                {
+                  "input_predicate": {
+                    "block": "minecraft:mud_bricks",
+                    "predicate_type": "minecraft:random_block_match",
+                    "probability": 0.01
+                  },
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "output_state": {
+                    "Name": "minecraft:cobweb"
+                  }
+                }
+              ]
+            },
+            {
+              "integrity": 0.99,
+              "processor_type": "minecraft:block_rot",
+              "rottable_blocks": "minecraft:mud_bricks"
+            },
+            {
+              "decay": 0.4,
+              "fullBlockProbability": 0.1,
+              "processor_type": "novia_additions:mud_block_age",
+              "stairBlockProbability": 0.1
+            },
+            {
+              "chestLootTable": "novia_additions:frames/demithril_shrine/statue",
+              "fallbackItem": {
+                "count": 1,
+                "id": "minecraft:emerald"
+              },
+              "posTest": {
+                "predicate_type": "minecraft:always_true"
+              },
+              "processor_type": "novia_additions:item_frame_loot"
+            }
+          ]
+        },
+        "projection": "rigid"
+      },
+      "weight": 32
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "novia_additions:vasquilan_catacombs/arena/snake",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:rule",
+              "rules": [
+                {
+                  "input_predicate": {
+                    "block": "minecraft:mud_bricks",
+                    "predicate_type": "minecraft:random_block_match",
+                    "probability": 0.01
+                  },
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "output_state": {
+                    "Name": "minecraft:cobweb"
+                  }
+                }
+              ]
+            },
+            {
+              "integrity": 0.99,
+              "processor_type": "minecraft:block_rot",
+              "rottable_blocks": "minecraft:mud_bricks"
+            },
+            {
+              "decay": 0.4,
+              "fullBlockProbability": 0.1,
+              "processor_type": "novia_additions:mud_block_age",
+              "stairBlockProbability": 0.1
+            },
+            {
+              "chestLootTable": "novia_additions:frames/demithril_shrine/statue",
+              "fallbackItem": {
+                "count": 1,
+                "id": "minecraft:emerald"
+              },
+              "posTest": {
+                "predicate_type": "minecraft:always_true"
+              },
+              "processor_type": "novia_additions:item_frame_loot"
+            }
+          ]
+        },
+        "projection": "rigid"
+      },
+      "weight": 36
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "novia_additions:vasquilan_catacombs/arena/trial",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:rule",
+              "rules": [
+                {
+                  "input_predicate": {
+                    "block": "minecraft:mud_bricks",
+                    "predicate_type": "minecraft:random_block_match",
+                    "probability": 0.01
+                  },
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "output_state": {
+                    "Name": "minecraft:cobweb"
+                  }
+                }
+              ]
+            },
+            {
+              "integrity": 0.99,
+              "processor_type": "minecraft:block_rot",
+              "rottable_blocks": "minecraft:mud_bricks"
+            },
+            {
+              "decay": 0.4,
+              "fullBlockProbability": 0.1,
+              "processor_type": "novia_additions:mud_block_age",
+              "stairBlockProbability": 0.1
+            }
+          ]
+        },
+        "projection": "rigid"
+      },
+      "weight": 28
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "novia_additions:vasquilan_catacombs/arena/wall",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:rule",
+              "rules": [
+                {
+                  "input_predicate": {
+                    "block": "minecraft:mud_bricks",
+                    "predicate_type": "minecraft:random_block_match",
+                    "probability": 0.01
+                  },
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "output_state": {
+                    "Name": "minecraft:cobweb"
+                  }
+                }
+              ]
+            },
+            {
+              "integrity": 0.99,
+              "processor_type": "minecraft:block_rot",
+              "rottable_blocks": "minecraft:mud_bricks"
+            },
+            {
+              "decay": 0.4,
+              "fullBlockProbability": 0.1,
+              "processor_type": "novia_additions:mud_block_age",
+              "stairBlockProbability": 0.1
+            }
+          ]
+        },
+        "projection": "rigid"
+      },
+      "weight": 31
+    }
+  ],
+  "fallback": "minecraft:empty"
+}

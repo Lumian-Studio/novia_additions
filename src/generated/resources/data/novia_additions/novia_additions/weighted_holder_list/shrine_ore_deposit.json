@@ -1,0 +1,45 @@
+{
+  "defaultWeight": 31,
+  "distribution": [
+    {
+      "entries": "#c:ores_in_ground/netherrack",
+      "weight": 0
+    },
+    {
+      "entries": "#c:ores_in_ground/end_stone",
+      "weight": 0
+    },
+    {
+      "name": "novia_additions:deepslate_novium_ore",
+      "weight": 2
+    },
+    {
+      "name": "minecraft:ancient_debris",
+      "weight": 4
+    },
+    {
+      "entries": "#minecraft:diamond_ores",
+      "weight": 17
+    },
+    {
+      "entries": "#minecraft:lapis_ores",
+      "weight": 18
+    },
+    {
+      "entries": "#minecraft:emerald_ores",
+      "weight": 29
+    },
+    {
+      "entries": "#minecraft:gold_ores",
+      "weight": 31
+    },
+    {
+      "entries": "#minecraft:coal_ores",
+      "weight": 87
+    }
+  ],
+  "registry": "minecraft:block",
+  "targets": [
+    "#c:ores"
+  ]
+}

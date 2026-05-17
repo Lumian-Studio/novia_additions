@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "bonus_rolls": 0.5,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "novia_additions:spawners/demithril_shrine/rare",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "novia_additions:novium_upgrade_smithing_template"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "novia_additions:spawners/demithril_shrine/ominous"
+}

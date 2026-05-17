@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#novia_additions:has_ore/demurium",
+  "features": "#novia_additions:ores/the_end",
+  "step": "underground_ores"
+}

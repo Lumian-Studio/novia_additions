@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "demithrium_ingot",
+  "key": {
+    "#": {
+      "item": "novia_additions:demithrium_nugget"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "novia_additions:demithrium_ingot"
+  }
+}

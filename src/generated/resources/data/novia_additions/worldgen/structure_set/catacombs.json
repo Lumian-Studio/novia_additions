@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 309340239,
+    "separation": 20,
+    "spacing": 30
+  },
+  "structures": [
+    {
+      "structure": "novia_additions:vasquilan_catacombs",
+      "weight": 1
+    }
+  ]
+}

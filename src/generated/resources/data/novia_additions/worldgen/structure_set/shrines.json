@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 729453476,
+    "separation": 23,
+    "spacing": 57
+  },
+  "structures": [
+    {
+      "structure": "novia_additions:demithril_shrine",
+      "weight": 1
+    }
+  ]
+}

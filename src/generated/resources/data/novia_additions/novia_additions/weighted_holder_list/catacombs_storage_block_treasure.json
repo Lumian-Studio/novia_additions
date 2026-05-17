@@ -1,0 +1,46 @@
+{
+  "defaultWeight": 1,
+  "distribution": [
+    {
+      "name": "minecraft:iron_block",
+      "weight": 50
+    },
+    {
+      "name": "minecraft:copper_block",
+      "weight": 50
+    },
+    {
+      "entries": [
+        "minecraft:gold_block",
+        "minecraft:emerald_block"
+      ],
+      "weight": 22
+    },
+    {
+      "entries": [
+        "minecraft:diamond_block",
+        "minecraft:lapis_block"
+      ],
+      "weight": 7
+    },
+    {
+      "name": "minecraft:netherite_block",
+      "weight": 2
+    },
+    {
+      "name": "novia_additions:novium_block",
+      "weight": 1
+    },
+    {
+      "entries": [
+        "novia_additions:demurium_block",
+        "novia_additions:demithrium_block"
+      ],
+      "weight": 0
+    }
+  ],
+  "registry": "minecraft:block",
+  "targets": [
+    "#c:storage_blocks"
+  ]
+}

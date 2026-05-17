@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "novia_additions:block/demithril_statue",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "novia_additions:block/demithril_statue"
+    },
+    "facing=south": {
+      "model": "novia_additions:block/demithril_statue",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "novia_additions:block/demithril_statue",
+      "y": 270
+    }
+  }
+}

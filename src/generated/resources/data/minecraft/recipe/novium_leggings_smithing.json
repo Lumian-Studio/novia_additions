@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "novia_additions:novium_ingot"
+  },
+  "base": {
+    "item": "minecraft:netherite_leggings"
+  },
+  "result": {
+    "count": 1,
+    "id": "novia_additions:novium_leggings"
+  },
+  "template": {
+    "item": "novia_additions:novium_upgrade_smithing_template"
+  }
+}

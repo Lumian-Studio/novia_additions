@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "demithrium_ingot",
+  "ingredients": [
+    {
+      "item": "novia_additions:novium_ingot"
+    },
+    {
+      "item": "novia_additions:novium_ingot"
+    },
+    {
+      "item": "novia_additions:novium_ingot"
+    },
+    {
+      "item": "novia_additions:novium_ingot"
+    },
+    {
+      "item": "novia_additions:demurium_crystal"
+    },
+    {
+      "item": "novia_additions:demurium_crystal"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "novia_additions:demithrium_ingot"
+  }
+}

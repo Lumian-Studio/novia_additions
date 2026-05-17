@@ -1,0 +1,29 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "novia_additions:block/novium_pellet_block"
+    },
+    "facing=east": {
+      "model": "novia_additions:block/novium_pellet_block",
+      "x": -90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "novia_additions:block/novium_pellet_block",
+      "x": -90
+    },
+    "facing=south": {
+      "model": "novia_additions:block/novium_pellet_block",
+      "x": -90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "novia_additions:block/novium_pellet_block"
+    },
+    "facing=west": {
+      "model": "novia_additions:block/novium_pellet_block",
+      "x": -90,
+      "y": -90
+    }
+  }
+}

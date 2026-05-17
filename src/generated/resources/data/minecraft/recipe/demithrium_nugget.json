@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "novia_additions:demithrium_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "novia_additions:demithrium_nugget"
+  }
+}

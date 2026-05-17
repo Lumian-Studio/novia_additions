@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_novium_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "novia_additions:novium_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:novium_block_from_novium_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_novium_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:novium_block_from_novium_ingot"
+    ]
+  }
+}

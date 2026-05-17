@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.5,
+  "ingredient": [
+    {
+      "item": "novia_additions:demithrium_pickaxe"
+    },
+    {
+      "item": "novia_additions:demithrium_axe"
+    },
+    {
+      "item": "novia_additions:demithrium_hoe"
+    },
+    {
+      "item": "novia_additions:demithrium_shovel"
+    },
+    {
+      "item": "novia_additions:demithrium_sword"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "novia_additions:demithrium_nugget"
+  }
+}

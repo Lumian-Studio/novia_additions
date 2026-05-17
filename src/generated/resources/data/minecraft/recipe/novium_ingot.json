@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "novium_ingot",
+  "ingredients": [
+    {
+      "item": "minecraft:netherite_scrap"
+    },
+    {
+      "item": "minecraft:netherite_scrap"
+    },
+    {
+      "item": "minecraft:netherite_scrap"
+    },
+    {
+      "item": "minecraft:netherite_scrap"
+    },
+    {
+      "item": "novia_additions:novium_pellet"
+    },
+    {
+      "item": "novia_additions:novium_pellet"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "novia_additions:novium_ingot"
+  }
+}

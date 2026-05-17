@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "novium_ingot",
+  "ingredients": [
+    {
+      "item": "novia_additions:novium_pellet_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "novia_additions:novium_pellet"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "novia_additions:block/end_stone_demurium_ore"
+  }
+}

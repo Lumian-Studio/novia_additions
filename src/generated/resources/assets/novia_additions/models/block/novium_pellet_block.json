@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "novia_additions:block/novium_pellet_block_bottom",
+    "side": "novia_additions:block/novium_pellet_block_side",
+    "top": "novia_additions:block/novium_pellet_block_top"
+  }
+}
