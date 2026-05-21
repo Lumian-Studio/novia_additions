@@ -76,7 +76,7 @@ public class ItemFrameLootProcessor
     }
     
     //==================================================================================================================
-    @Override protected StructureProcessorType<?> getType() { return ModStructureProcessors.ITEM_FRAME_LOOT.get(); }
+    @Override protected StructureProcessorType<?> getType() { return ModStructureProcessors.ITEM_FRAME_LOOT.value(); }
     
     //==================================================================================================================
     @Override

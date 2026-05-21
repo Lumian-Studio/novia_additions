@@ -79,9 +79,13 @@ public class ModItems
             .jukeboxPlayable(ModJukeboxSongs.EVOLUTION))));
     
     public static final DeferredItem<Item> NOVIA_BANNER_PATTERN = register("novia_banner_pattern", (props ->
-        new BannerPatternItem(ModBannerPatterns.PATTERN_ITEM_NOVIA, (new Item.Properties())
+        new BannerPatternItem(ModBannerPatterns.PATTERN_ITEM_NOVIA, props
             .rarity(Rarity.RARE)
             .stacksTo(1))));
+    
+    //..................................................................................................................
+    public static final DeferredItem<Item> TRUTHSEEKER = register("truthseeker", (props ->
+        new TruthSeekerItem(props.stacksTo(1).rarity(Rarity.EPIC))));
     
     //..................................................................................................................
     // NOVIUM & DEMITHRIUM STUFF

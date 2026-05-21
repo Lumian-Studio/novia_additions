@@ -6,6 +6,8 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import xyz.lumian.novia_additions.client.renderer.TruthseekerRenderer;
 
 
 
@@ -15,8 +17,11 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 public class NoviaAdditionsClient
 {
     //******************************************************************************************************************
-    public NoviaAdditionsClient(final ModContainer container) {}
-
+    public NoviaAdditionsClient(final ModContainer container)
+    {
+        NeoForge.EVENT_BUS.register(TruthseekerRenderer.INSTANCE);
+    }
+    
     //==================================================================================================================
-    @SubscribeEvent static void onClientSetup(final FMLClientSetupEvent e) {}
+    @SubscribeEvent private static void onClientSetup(final FMLClientSetupEvent e) {}
 }

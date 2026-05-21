@@ -20,7 +20,7 @@ public class ModStructureSets
 {
     //******************************************************************************************************************
     public static final ResourceKey<StructureSet> SHRINES   = create("shrines");
-    public static final ResourceKey<StructureSet> CATACOMBS = create("catacombs");
+    //public static final ResourceKey<StructureSet> CATACOMBS = create("catacombs");
     
     //******************************************************************************************************************
     public static void bootstrap(final BootstrapContext<StructureSet> context)
@@ -29,9 +29,9 @@ public class ModStructureSets
         context.register(ModStructureSets.SHRINES, new StructureSet(
             List.of(new StructureSet.StructureSelectionEntry(structures.getOrThrow(ModStructures.SHRINE), 1)),
             new RandomSpreadStructurePlacement(57, 23, RandomSpreadType.LINEAR, 729453476)));
-        context.register(ModStructureSets.CATACOMBS, new StructureSet(
+        /*context.register(ModStructureSets.CATACOMBS, new StructureSet(
             List.of(new StructureSet.StructureSelectionEntry(structures.getOrThrow(ModStructures.CATACOMBS), 1)),
-            new RandomSpreadStructurePlacement(30, 20, RandomSpreadType.LINEAR, 309340239)));
+            new RandomSpreadStructurePlacement(30, 20, RandomSpreadType.LINEAR, 309340239)));*/
     }
     
     //==================================================================================================================

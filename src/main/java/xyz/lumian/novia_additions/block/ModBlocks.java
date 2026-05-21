@@ -64,6 +64,8 @@ public class ModBlocks
             .strength(70f, 5000f))),
         (new Item.Properties()).fireResistant());
     
+    public static final DeferredBlock<Block> GHOST_BLOCK = register("ghost_block", GhostBlock::new);
+    
     //******************************************************************************************************************
     public static <T extends Block> DeferredBlock<T> register(
         final String                                 name,

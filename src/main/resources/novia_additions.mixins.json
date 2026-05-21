@@ -5,7 +5,13 @@
     "mixins": [
         "ChiseledBookShelfBlockEntityMixin",
         "IItemStackExtensionMixin",
-        "ItemMixin"
+        "ItemMixin",
+        "JigsawPlacementMixin",
+        "StructureTemplateMixin"
+    ],
+    "client": [
+        "LivingEntityRendererMixin",
+        "PaintingRendererMixin"
     ],
     "injectors": {
         "defaultRequire": 1

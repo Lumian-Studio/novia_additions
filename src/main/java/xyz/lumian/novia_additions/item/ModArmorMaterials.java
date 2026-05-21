@@ -7,7 +7,6 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import xyz.lumian.novia_additions.Define;
 
@@ -26,30 +25,31 @@ public class ModArmorMaterials
         .create(BuiltInRegistries.ARMOR_MATERIAL, Define.MOD_ID);
     
     //==================================================================================================================
-    public static final DeferredHolder<ArmorMaterial, ArmorMaterial> NOVIUM = register("novium",
-        4, 9, 7, 4,
+    public static final Holder<ArmorMaterial> NOVIUM = register("novium",
         50,
         SoundEvents.ARMOR_EQUIP_NETHERITE,
         (() -> Ingredient.of(ModItems.NOVIUM_INGOT.get())),
         5f,
-        0.15f);
-    public static final DeferredHolder<ArmorMaterial, ArmorMaterial> DEMITHRIUM = register("demithrium",
-        6, 11, 9, 6,
+        0.15f,
+        4, 9, 7, 4);
+    public static final Holder<ArmorMaterial> DEMITHRIUM = register("demithrium",
         100,
         SoundEvents.ARMOR_EQUIP_NETHERITE,
         (() -> Ingredient.of(ModItems.DEMITHRIUM_INGOT.get())),
         9f,
-        0.25f);
+        0.25f,
+        6, 11, 9, 6);
     
     //******************************************************************************************************************
-    public static DeferredHolder<ArmorMaterial, ArmorMaterial> register(
+    public static Holder<ArmorMaterial> register(
         final String               name,
-        final int helmet, final int chestplate, final int leggings, final int boots,
         final int                  enchantmentValue,
         final Holder<SoundEvent>   equipSound,
         final Supplier<Ingredient> repairItem,
         final float                toughness,
-        final float                knockbackResistance)
+        final float                knockbackResistance,
+        final int helmet, final int chestplate, final int leggings, final int boots
+    )
     {
         final List<ArmorMaterial.Layer> layers   = Collections.singletonList(new ArmorMaterial.Layer(Define.mod(name)));
         final ArmorMaterial             material = new ArmorMaterial(

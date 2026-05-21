@@ -359,8 +359,7 @@ public class ModTagProvider
                 );
             this.tag(ModBiomeTags.HAS_CATACOMBS).add(
                 net.minecraft.world.level.biome.Biomes.SWAMP,
-                net.minecraft.world.level.biome.Biomes.MANGROVE_SWAMP,
-                net.minecraft.world.level.biome.Biomes.OLD_GROWTH_PINE_TAIGA
+                net.minecraft.world.level.biome.Biomes.MANGROVE_SWAMP
             );
             this.tag(ModBiomeTags.HAS_NOVIUM_ORE).addTag(BiomeTags.IS_OVERWORLD);
             this.tag(ModBiomeTags.HAS_DEMURIUM_ORE).add(

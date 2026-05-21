@@ -30,7 +30,7 @@ public class ModStructures
 {
     //******************************************************************************************************************
     public static final ResourceKey<Structure> SHRINE    = create("demithril_shrine");
-    public static final ResourceKey<Structure> CATACOMBS = create("vasquilan_catacombs");
+    //public static final ResourceKey<Structure> CATACOMBS = create("vasquilan_catacombs");//
     
     //******************************************************************************************************************
     public static void bootstrap(final BootstrapContext<Structure> context)
@@ -52,21 +52,21 @@ public class ModStructures
             List.of(),
             DimensionPadding.ZERO,
             JigsawStructure.DEFAULT_LIQUID_SETTINGS));
-        context.register(ModStructures.CATACOMBS, new JigsawStructure(
+        /*context.register(ModStructures.CATACOMBS, new JigsawStructure(
             (new Structure.StructureSettings.Builder(biomes.getOrThrow(ModBiomeTags.HAS_CATACOMBS)))
                 .generationStep(GenerationStep.Decoration.UNDERGROUND_STRUCTURES)
                 .terrainAdapation(TerrainAdjustment.BURY)
                 .build(),
             pools.getOrThrow(VasquilanCatacombPools.START),
             Optional.empty(),
-            16,
+            20,
             ConstantHeight.of(VerticalAnchor.absolute(-34)),
             false,
             Optional.of(Heightmap.Types.WORLD_SURFACE_WG),
-            110,
+            116,
             List.of(),
             DimensionPadding.ZERO,
-            LiquidSettings.IGNORE_WATERLOGGING));
+            LiquidSettings.IGNORE_WATERLOGGING));*/
     }
     
     //==================================================================================================================

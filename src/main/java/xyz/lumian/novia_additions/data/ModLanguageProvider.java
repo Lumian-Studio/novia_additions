@@ -71,6 +71,10 @@ public class ModLanguageProvider
         
         this.addBannerPattern(ModItems.NOVIA_BANNER_PATTERN.get(), ModBannerPatterns.NOVIA, "Novia");
         
+        this.add(ModItems.TRUTHSEEKER.get(), "Truthseeker");
+        this.add("subtitles.item.novia_additions.truthseeker.activate",   "Truthseeker activating");
+        this.add("subtitles.item.novia_additions.truthseeker.deactivate", "Truthseeker deactivating");
+        
         this.add(ModItems.NOVIUM_PICKAXE    .get(), "Novium Pickaxe");
         this.add(ModItems.DEMITHRIUM_PICKAXE.get(), "Demithrium Pickaxe");
         this.add(ModItems.NOVIUM_AXE        .get(), "Novium Axe");
@@ -102,6 +106,7 @@ public class ModLanguageProvider
         
         // BLOCKS
         this.add(ModBlocks.DEMITHRIL_STATUE.get(), "Demithril Statue");
+        this.add(ModBlocks.GHOST_BLOCK     .get(), "Ghost Block");
         
         this.add(ModBlocks.DEEPSLATE_NOVIUM_ORE  .get(), "Deepslate Novium Ore");
         this.add(ModBlocks.END_STONE_DEMURIUM_ORE.get(), "End Stone Demurium Ore");

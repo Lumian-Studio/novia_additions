@@ -40,7 +40,7 @@
         },
         "projection": "rigid"
       },
-      "weight": 15
+      "weight": 25
     },
     {
       "element": {
@@ -82,7 +82,7 @@
         },
         "projection": "rigid"
       },
-      "weight": 15
+      "weight": 25
     },
     {
       "element": {
@@ -124,7 +124,7 @@
         },
         "projection": "rigid"
       },
-      "weight": 15
+      "weight": 25
     },
     {
       "element": {
@@ -166,7 +166,7 @@
         },
         "projection": "rigid"
       },
-      "weight": 15
+      "weight": 25
     },
     {
       "element": {
@@ -208,7 +208,7 @@
         },
         "projection": "rigid"
       },
-      "weight": 15
+      "weight": 25
     },
     {
       "element": {
@@ -250,7 +250,7 @@
         },
         "projection": "rigid"
       },
-      "weight": 9
+      "weight": 15
     }
   ],
   "fallback": "novia_additions:vasquilan_catacombs/dead_ends"

@@ -69,9 +69,10 @@ public class ModItemModelProvider
         this.simpleBlockItem(ModBlocks.END_STONE_DEMURIUM_ORE.get());
         this.simpleBlockItem(ModBlocks.DEMURIUM_BLOCK.get());
         this.simpleBlockItem(ModBlocks.DEMITHRIUM_BLOCK.get());
+        this.simpleBlockItem(ModBlocks.GHOST_BLOCK.get());
         
         // ITEMS
-        this.withExistingParent(ModItems.MUSIC_DISC_EVOLUTION .getId().toString(), "item/template_music_disc")
+        this.withExistingParent(ModItems.MUSIC_DISC_EVOLUTION.getId().toString(), "item/template_music_disc")
             .texture("layer0", ModItems.MUSIC_DISC_EVOLUTION.getId().withPrefix("item/"));
         this.withExistingParent(ModItems.MUSIC_DISC_REVOLUTION.getId().toString(), "item/template_music_disc")
             .texture("layer0", ModItems.MUSIC_DISC_REVOLUTION.getId().withPrefix("item/"));
@@ -86,6 +87,7 @@ public class ModItemModelProvider
         this.basicItem(ModItems.NOVIUM_UPGRADE_SMITHING_TEMPLATE.get());
         this.basicItem(ModItems.DEMITHRIUM_UPGRADE_SMITHING_TEMPLATE.get());
         
+        this.handheldItem(ModItems.TRUTHSEEKER.get());
         this.handheldItem(ModItems.NOVIUM_PICKAXE.get());
         this.handheldItem(ModItems.NOVIUM_AXE.get());
         this.handheldItem(ModItems.NOVIUM_HOE.get());

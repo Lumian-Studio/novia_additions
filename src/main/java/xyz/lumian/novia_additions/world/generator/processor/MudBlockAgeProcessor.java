@@ -63,7 +63,7 @@ public class MudBlockAgeProcessor
     private final float stairBlockProbability;
     
     //******************************************************************************************************************
-    @Override protected StructureProcessorType<?> getType() { return ModStructureProcessors.MUD_BLOCK_AGE.get(); }
+    @Override protected StructureProcessorType<?> getType() { return ModStructureProcessors.MUD_BLOCK_AGE.value(); }
     
     //==================================================================================================================
     @Override

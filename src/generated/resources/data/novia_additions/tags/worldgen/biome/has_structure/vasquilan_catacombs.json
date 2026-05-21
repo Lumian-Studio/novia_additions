@@ -1,7 +1,6 @@
 {
   "values": [
     "minecraft:swamp",
-    "minecraft:mangrove_swamp",
-    "minecraft:old_growth_pine_taiga"
+    "minecraft:mangrove_swamp"
   ]
 }

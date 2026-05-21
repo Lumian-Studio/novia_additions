@@ -1,0 +1,80 @@
+{
+    "targets": [
+        "temp",
+        "largeBlur"
+    ],
+    "passes": [
+        {
+            "name": "box_blur",
+            "intarget": "minecraft:main",
+            "outtarget": "temp",
+            "use_linear_filter": true,
+            "uniforms": [
+                {
+                    "name": "BlurDir",
+                    "values": [ 1.0, 0.0 ]
+                },
+                {
+                    "name": "Radius",
+                    "values": [ 15.0 ]
+                }
+            ]
+        },
+        {
+            "name": "box_blur",
+            "intarget": "temp",
+            "outtarget": "largeBlur",
+            "use_linear_filter": true,
+            "uniforms": [
+                {
+                    "name": "BlurDir",
+                    "values": [ 0.0, 1.0 ]
+                },
+                {
+                    "name": "Radius",
+                    "values": [ 15.0 ]
+                }
+            ]
+        },
+        {
+            "name": "spider",
+            "intarget": "minecraft:main",
+            "outtarget": "temp",
+            "auxtargets": [
+                {
+                    "name": "BlurSampler",
+                    "id": "largeBlur"
+                }
+            ],
+            "uniforms": [
+                {
+                    "name": "InScale",
+                    "values": [ 1.0, 1.0 ]
+                },
+                {
+                    "name": "InOffset",
+                    "values": [ 0, 0 ]
+                },
+                {
+                    "name": "Scissor",
+                    "values": [ 0.0, 0.0, 1.0, 1.0 ]
+                },
+                {
+                    "name": "Vignette",
+                    "values": [ 0.35, 0.35, 0.65, 0.65 ]
+                }
+            ]
+        },
+        {
+            "name": "blit",
+            "intarget": "temp",
+            "outtarget": "minecraft:main",
+            "uniforms": [
+                {
+                    "name": "ColorModulate",
+                    "values": [ 1.0, 0.9, 0.9, 1.0 ]
+                }
+            ]
+        }
+    ]
+}

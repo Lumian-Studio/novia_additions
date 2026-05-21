@@ -8,10 +8,13 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.slf4j.Logger;
+import xyz.lumian.novia_additions.block.ModBlockEntities;
 import xyz.lumian.novia_additions.block.ModBlocks;
 import xyz.lumian.novia_additions.item.ModArmorMaterials;
 import xyz.lumian.novia_additions.item.ModItems;
+import xyz.lumian.novia_additions.registry.ModAttachments;
 import xyz.lumian.novia_additions.world.generator.ModStructureProcessors;
+import xyz.lumian.novia_additions.world.generator.structure.pool.ModStructurePoolElementTypes;
 
 
 
@@ -27,11 +30,15 @@ public class NoviaAdditions
     {
         NoviaAdditions.LOGGER.info("Initialising registries");
         
-        ModItems              .ITEMS     .register(modEventBus);
-        ModBlocks             .BLOCKS    .register(modEventBus);
-        ModSoundEvents        .SOUNDS    .register(modEventBus);
-        ModArmorMaterials     .MATERIALS .register(modEventBus);
-        ModStructureProcessors.PROCESSORS.register(modEventBus);
+        ModItems                    .ITEMS         .register(modEventBus);
+        ModBlocks                   .BLOCKS        .register(modEventBus);
+        ModSoundEvents              .SOUNDS        .register(modEventBus);
+        ModArmorMaterials           .MATERIALS     .register(modEventBus);
+        ModStructureProcessors      .PROCESSORS    .register(modEventBus);
+        ModBlockEntities            .BLOCK_ENTITIES.register(modEventBus);
+        ModAttachments              .ATTACHMENTS   .register(modEventBus);
+        //ModStructureTypes           .TYPES         .register(modEventBus);
+        ModStructurePoolElementTypes.TYPES         .register(modEventBus);
         
         NeoForge.EVENT_BUS.register(this);
     }

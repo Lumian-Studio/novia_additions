@@ -1,10 +1,22 @@
 package xyz.lumian.novia_additions.data.loot;
 
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.functions.LootItemConditionalFunction;
+import net.minecraft.world.level.storage.loot.functions.LootItemFunction;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemConditions;
+import net.minecraft.world.level.storage.loot.predicates.LootItemEntityPropertyCondition;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import xyz.lumian.novia_additions.block.GhostBlock;
 import xyz.lumian.novia_additions.block.ModBlocks;
 import xyz.lumian.novia_additions.item.ModItems;
 
@@ -38,6 +50,8 @@ public class ModBlockLootProvider
         this.add(
             ModBlocks.DEEPSLATE_NOVIUM_ORE.get(),
             (block -> this.createOreDrop(block, ModItems.NOVIUM_PELLET.get())));
+        
+        this.add(ModBlocks.GHOST_BLOCK.get(), LootTable.lootTable());
     }
     
     @Override

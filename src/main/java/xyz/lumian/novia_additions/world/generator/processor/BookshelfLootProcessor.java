@@ -141,7 +141,7 @@ public class BookshelfLootProcessor
     }
     
     //==================================================================================================================
-    @Override protected StructureProcessorType<?> getType() { return ModStructureProcessors.BOOKSHELF_LOOT.get(); }
+    @Override protected StructureProcessorType<?> getType() { return ModStructureProcessors.BOOKSHELF_LOOT.value(); }
     
     //==================================================================================================================
     @Override

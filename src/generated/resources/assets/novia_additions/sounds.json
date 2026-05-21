@@ -1,0 +1,57 @@
+{
+  "item.truthseeker.activate": {
+    "sounds": [
+      {
+        "name": "novia_additions:item/truthseeker/activate",
+        "pitch": 1.16,
+        "volume": 0.4
+      },
+      {
+        "name": "novia_additions:item/truthseeker/activate",
+        "pitch": 1.33,
+        "volume": 0.4
+      },
+      {
+        "name": "novia_additions:item/truthseeker/activate",
+        "pitch": 1.24,
+        "volume": 0.4
+      }
+    ],
+    "subtitle": "subtitles.item.novia_additions.activate"
+  },
+  "item.truthseeker.deactivate": {
+    "sounds": [
+      {
+        "name": "novia_additions:item/truthseeker/deactivate",
+        "volume": 0.5
+      },
+      {
+        "name": "novia_additions:item/truthseeker/deactivate",
+        "pitch": 0.89,
+        "volume": 0.5
+      },
+      {
+        "name": "novia_additions:item/truthseeker/deactivate",
+        "pitch": 0.8,
+        "volume": 0.5
+      }
+    ],
+    "subtitle": "subtitles.item.novia_additions.deactivate"
+  },
+  "music_disc.evolution": {
+    "sounds": [
+      {
+        "name": "novia_additions:records/evolution",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.revolution": {
+    "sounds": [
+      {
+        "name": "novia_additions:records/revolution",
+        "stream": true
+      }
+    ]
+  }
+}

@@ -88,12 +88,12 @@ public class VasquilanCatacombPools
             new ItemStack(Items.EMERALD));
         
         final ProcessorRule sus_rule = ModPools.simpleRule(
-             new RandomBlockMatchTest(Blocks.GRAVEL, 0.1f),
+             new RandomBlockMatchTest(Blocks.GRAVEL, 0.2f),
              Blocks.SUSPICIOUS_GRAVEL.defaultBlockState());
         
         final var dead_end = ModPools.simpleElement(VasquilanCatacombPools.createId("dead_end"),
             catacombs_processors,
-            waterlog, 9);
+            waterlog, 15);
         VasquilanCatacombPools.subPool(context, "dead_ends", new StructureTemplatePool(
             empty,
             List.of(dead_end),
@@ -109,7 +109,7 @@ public class VasquilanCatacombPools
                 IntStream.rangeClosed(1, 5).mapToObj(i -> ModPools.simpleElement(
                     VasquilanCatacombPools.createId("path/mud_" + i),
                     catacombs_processors,
-                    waterlog, 15)),
+                    waterlog, 25)),
                 Stream.of(dead_end)
             ).toList(),
             StructureTemplatePool.Projection.RIGID
@@ -117,24 +117,23 @@ public class VasquilanCatacombPools
         
         final HolderGetter<WeightedHolderList<?>> weights = context.lookup(ModRegistries.WEIGHTED_HOLDER_LIST);
         final var small_rooms = List.of(
-            ModPools.simpleElement(
-                VasquilanCatacombPools.createId("room/brush_haven"),
+            ModPools.simpleElement(VasquilanCatacombPools.createId("room/brush_haven"),
                 VasquilanCatacombPools.CATACOMBS_PROCESSORS
                     .withRule(sus_rule)
                     .build(),
                 waterlog, 8),
-            ModPools.simpleElement(
-                VasquilanCatacombPools.createId("room/loot_haven"),
+            ModPools.simpleElement(VasquilanCatacombPools.createId("room/loot_haven"),
                 VasquilanCatacombPools.CATACOMBS_PROCESSORS
                     .with(frame_loot_proc)
                     .build(),
                 waterlog, 7),
-            ModPools.simpleElement(
-                VasquilanCatacombPools.createId("room/chest_haven"),
+            ModPools.simpleElement(VasquilanCatacombPools.createId("room/chest_haven"),
                 catacombs_processors,
                 waterlog, 6),
-            ModPools.simpleElement(
-                VasquilanCatacombPools.createId("room/liars_haven"),
+            ModPools.simpleElement(VasquilanCatacombPools.createId("room/deathrow/main"),
+                catacombs_processors,
+                waterlog, 6),
+            ModPools.simpleElement(VasquilanCatacombPools.createId("room/liars_haven"),
                 VasquilanCatacombPools.CATACOMBS_PROCESSORS
                     .with(new WeightedBlockReplacementProcessor(
                         new BlockMatchTest(Blocks.EMERALD_BLOCK),
@@ -150,26 +149,29 @@ public class VasquilanCatacombPools
                 list.addAll(small_rooms);
                 list.add(ModPools.simpleElement(VasquilanCatacombPools.createId("room/cross_section"),
                     catacombs_processors,
-                    waterlog, 10));
+                    waterlog, 33));
                 list.add(ModPools.simpleElement(VasquilanCatacombPools.createId("room/arena"),
                     VasquilanCatacombPools.CATACOMBS_PROCESSORS
                         .with(frame_loot_proc)
                         .build(),
-                    waterlog, 15));
+                    waterlog, 33));
+                list.add(ModPools.simpleElement(VasquilanCatacombPools.createId("room/hall"),
+                    catacombs_processors,
+                    waterlog, 30));
                 list.add(ModPools.simpleElement(VasquilanCatacombPools.createId("room/pillar"),
                     catacombs_processors,
-                    waterlog, 11));
+                    waterlog, 21));
                 list.add(ModPools.simpleElement(VasquilanCatacombPools.createId("path/mud_1"),
                     catacombs_processors,
-                    waterlog, 10));
+                    waterlog, 25));
                 list.add(ModPools.simpleElement(VasquilanCatacombPools.createId("path/mud_2"),
                     catacombs_processors,
-                    waterlog, 10));
+                    waterlog, 25));
                 list.add(ModPools.simpleElement(VasquilanCatacombPools.createId("arena/labyrinth"),
                     VasquilanCatacombPools.CATACOMBS_PROCESSORS
                         .with(frame_loot_proc)
                         .build(),
-                    waterlog, 13));
+                    waterlog, 30));
                 list.add(dead_end);
             })),
             StructureTemplatePool.Projection.RIGID
@@ -182,43 +184,60 @@ public class VasquilanCatacombPools
         VasquilanCatacombPools.subPool(context, "arena_parts", new StructureTemplatePool(
             empty,
             List.of(
-                ModPools.simpleElement(
-                    VasquilanCatacombPools.createId("arena/labyrinth"),
+                ModPools.simpleElement(VasquilanCatacombPools.createId("arena/labyrinth"),
                     VasquilanCatacombPools.CATACOMBS_PROCESSORS
                         .with(frame_loot_proc)
                         .build(),
                     waterlog, 32),
-                ModPools.simpleElement(
-                    VasquilanCatacombPools.createId("arena/snake"),
+                ModPools.simpleElement(VasquilanCatacombPools.createId("arena/snake"),
                     VasquilanCatacombPools.CATACOMBS_PROCESSORS
                         .with(frame_loot_proc)
                         .build(),
                     waterlog, 36),
-                ModPools.simpleElement(
-                    VasquilanCatacombPools.createId("arena/trial"),
+                ModPools.simpleElement(VasquilanCatacombPools.createId("arena/trial"),
                     catacombs_processors,
                     waterlog, 28),
-                ModPools.simpleElement(
-                    VasquilanCatacombPools.createId("arena/wall"),
+                ModPools.simpleElement(VasquilanCatacombPools.createId("arena/wall"),
                     catacombs_processors,
-                    waterlog, 31)
+                    waterlog, 28)
             ),
             StructureTemplatePool.Projection.RIGID
         ));
         VasquilanCatacombPools.subPool(context, "arena", new StructureTemplatePool(
             empty,
             List.of(
-                ModPools.simpleElement(
-                    VasquilanCatacombPools.createId("room/arena"),
+                ModPools.simpleElement(VasquilanCatacombPools.createId("room/arena"),
                     VasquilanCatacombPools.CATACOMBS_PROCESSORS
                         .with(frame_loot_proc)
                         .build(),
-                    waterlog, 1),
-                ModPools.simpleElement(
-                    VasquilanCatacombPools.createId("arena/wall"),
+                    waterlog, 5),
+                ModPools.simpleElement(VasquilanCatacombPools.createId("arena/wall"),
                     catacombs_processors,
                     waterlog, 1)
             ),
+            StructureTemplatePool.Projection.RIGID
+        ));
+        VasquilanCatacombPools.subPool(context, "compartments", new StructureTemplatePool(
+            empty,
+            List.of(
+                ModPools.simpleElement(VasquilanCatacombPools.createId("room/deathrow/dead_end"),
+                    ModPools.directProc(),
+                    waterlog, 10),
+                ModPools.simpleElement(VasquilanCatacombPools.createId("room/deathrow/exit"),
+                    ModPools.directProc(),
+                    waterlog, 1)
+            ),
+            StructureTemplatePool.Projection.RIGID
+        ));
+        VasquilanCatacombPools.subPool(context, "death_paths", new StructureTemplatePool(
+            ending_pool,
+            Util.make(new ArrayList<>(), (list ->
+            {
+                list.addAll(small_rooms);
+                list.add(ModPools.uniqueElement(VasquilanCatacombPools.createId("room/deathrow/entrance"),
+                    catacombs_processors,
+                    waterlog, 1, 7));
+            })),
             StructureTemplatePool.Projection.RIGID
         ));
     }

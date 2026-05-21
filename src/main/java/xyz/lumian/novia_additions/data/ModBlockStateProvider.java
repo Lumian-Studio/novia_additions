@@ -78,6 +78,9 @@ public class ModBlockStateProvider
             .addModel();
         }
         
+        this.models().getBuilder(ModBlocks.GHOST_BLOCK.getId().toString())
+            .texture("particle", ModBlocks.GHOST_BLOCK.getId().withPrefix("item/").toString());
+        
         this.simpleBlock(ModBlocks.NOVIUM_BLOCK.get());
         this.simpleBlock(ModBlocks.DEEPSLATE_NOVIUM_ORE.get());
         this.simpleBlock(ModBlocks.END_STONE_DEMURIUM_ORE.get());

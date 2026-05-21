@@ -68,7 +68,7 @@ public class WeightedBlockReplacementProcessor
     @Override
     protected StructureProcessorType<?> getType()
     {
-        return ModStructureProcessors.WEIGHTED_BLOCK_REPLACEMENT.get();
+        return ModStructureProcessors.WEIGHTED_BLOCK_REPLACEMENT.value();
     }
     
     //==================================================================================================================

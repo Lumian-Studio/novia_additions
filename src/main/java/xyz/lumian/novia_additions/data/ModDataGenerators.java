@@ -163,7 +163,8 @@ public class ModDataGenerators
     
     private static final FactorySet CLIENT = FactorySet.of()
         .with(ModBlockStateProvider::new)
-        .with(ModItemModelProvider::new);
+        .with(ModItemModelProvider::new)
+        .with(ModSoundDefinitionProvider::new);
     
     //******************************************************************************************************************
     @SubscribeEvent

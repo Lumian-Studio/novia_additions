@@ -1,8 +1,8 @@
 package xyz.lumian.novia_additions;
 
+import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.sounds.SoundEvent;
-import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 
@@ -15,13 +15,15 @@ public class ModSoundEvents
         .create(BuiltInRegistries.SOUND_EVENT, Define.MOD_ID);
     
     //==================================================================================================================
-    public static final DeferredHolder<SoundEvent, SoundEvent> REVOLUTION
-        = ModSoundEvents.register("music_disc.revolution");
-    public static final DeferredHolder<SoundEvent, SoundEvent> EVOLUTION
-        = ModSoundEvents.register("music_disc.evolution");
+    public static final Holder<SoundEvent> REVOLUTION = register("music_disc.revolution");
+    public static final Holder<SoundEvent> EVOLUTION  = register("music_disc.evolution");
+    
+    //==================================================================================================================
+    public static final Holder<SoundEvent> ITEM_TRUTHSEEKER_ACTIVATE   = register("item.truthseeker.activate");
+    public static final Holder<SoundEvent> ITEM_TRUTHSEEKER_DEACTIVATE = register("item.truthseeker.deactivate");
     
     //******************************************************************************************************************
-    private static DeferredHolder<SoundEvent, SoundEvent> register(final String name)
+    private static Holder<SoundEvent> register(final String name)
     {
         return ModSoundEvents.SOUNDS.register(name, (() -> SoundEvent.createVariableRangeEvent(Define.mod(name))));
     }

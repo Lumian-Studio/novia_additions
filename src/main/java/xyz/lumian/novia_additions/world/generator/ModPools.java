@@ -13,11 +13,13 @@ import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
 import net.minecraft.world.level.levelgen.structure.templatesystem.*;
 import xyz.lumian.novia_additions.Define;
 import xyz.lumian.novia_additions.world.generator.structure.pool.DemithrilShrinePools;
+import xyz.lumian.novia_additions.world.generator.structure.pool.UniquePoolElement;
 import xyz.lumian.novia_additions.world.generator.structure.pool.VasquilanCatacombPools;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Function;
 
 
@@ -139,6 +141,21 @@ public class ModPools
     )
     {
         return Pair.of(SinglePoolElement.single(id.toString(), processors, liquidSettings), weight);
+    }
+    
+    public static Pair<Function<StructureTemplatePool.Projection, ? extends StructurePoolElement>, Integer>
+    uniqueElement(
+        final ResourceLocation               id,
+        final Holder<StructureProcessorList> processors,
+        final LiquidSettings                 liquidSettings,
+        final int                            maxOccurrences,
+        final int                            weight
+    )
+    {
+        return Pair.of(
+            (projection -> new UniquePoolElement(id, processors, projection, Optional.of(liquidSettings),
+                                                 maxOccurrences)),
+            weight);
     }
     
     public static Holder<StructureProcessorList> directProc(StructureProcessor ...processors)

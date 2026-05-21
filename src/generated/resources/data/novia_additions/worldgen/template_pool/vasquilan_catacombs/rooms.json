@@ -43,7 +43,7 @@
                   "input_predicate": {
                     "block": "minecraft:gravel",
                     "predicate_type": "minecraft:random_block_match",
-                    "probability": 0.1
+                    "probability": 0.2
                   },
                   "location_predicate": {
                     "predicate_type": "minecraft:always_true"
@@ -120,6 +120,48 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "novia_additions:vasquilan_catacombs/room/chest_haven",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:rule",
+              "rules": [
+                {
+                  "input_predicate": {
+                    "block": "minecraft:mud_bricks",
+                    "predicate_type": "minecraft:random_block_match",
+                    "probability": 0.01
+                  },
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "output_state": {
+                    "Name": "minecraft:cobweb"
+                  }
+                }
+              ]
+            },
+            {
+              "integrity": 0.99,
+              "processor_type": "minecraft:block_rot",
+              "rottable_blocks": "minecraft:mud_bricks"
+            },
+            {
+              "decay": 0.4,
+              "fullBlockProbability": 0.1,
+              "processor_type": "novia_additions:mud_block_age",
+              "stairBlockProbability": 0.1
+            }
+          ]
+        },
+        "projection": "rigid"
+      },
+      "weight": 6
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "novia_additions:vasquilan_catacombs/room/deathrow/main",
         "override_liquid_settings": "ignore_waterlogging",
         "processors": {
           "processors": [
@@ -248,7 +290,7 @@
         },
         "projection": "rigid"
       },
-      "weight": 10
+      "weight": 33
     },
     {
       "element": {
@@ -301,7 +343,49 @@
         },
         "projection": "rigid"
       },
-      "weight": 15
+      "weight": 33
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "novia_additions:vasquilan_catacombs/room/hall",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:rule",
+              "rules": [
+                {
+                  "input_predicate": {
+                    "block": "minecraft:mud_bricks",
+                    "predicate_type": "minecraft:random_block_match",
+                    "probability": 0.01
+                  },
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "output_state": {
+                    "Name": "minecraft:cobweb"
+                  }
+                }
+              ]
+            },
+            {
+              "integrity": 0.99,
+              "processor_type": "minecraft:block_rot",
+              "rottable_blocks": "minecraft:mud_bricks"
+            },
+            {
+              "decay": 0.4,
+              "fullBlockProbability": 0.1,
+              "processor_type": "novia_additions:mud_block_age",
+              "stairBlockProbability": 0.1
+            }
+          ]
+        },
+        "projection": "rigid"
+      },
+      "weight": 30
     },
     {
       "element": {
@@ -343,7 +427,7 @@
         },
         "projection": "rigid"
       },
-      "weight": 11
+      "weight": 21
     },
     {
       "element": {
@@ -385,7 +469,7 @@
         },
         "projection": "rigid"
       },
-      "weight": 10
+      "weight": 25
     },
     {
       "element": {
@@ -427,7 +511,7 @@
         },
         "projection": "rigid"
       },
-      "weight": 10
+      "weight": 25
     },
     {
       "element": {
@@ -480,7 +564,7 @@
         },
         "projection": "rigid"
       },
-      "weight": 13
+      "weight": 30
     },
     {
       "element": {
@@ -522,7 +606,7 @@
         },
         "projection": "rigid"
       },
-      "weight": 9
+      "weight": 15
     }
   ],
   "fallback": "novia_additions:vasquilan_catacombs/dead_ends"
