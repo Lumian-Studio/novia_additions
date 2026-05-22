@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_demurium_crystal": {
+      "conditions": {
+        "items": [
+          {
+            "items": "novia_additions:demurium_crystal"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "novia_additions:demithrium_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_demurium_crystal"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "novia_additions:demithrium_ingot"
+    ]
+  }
+}

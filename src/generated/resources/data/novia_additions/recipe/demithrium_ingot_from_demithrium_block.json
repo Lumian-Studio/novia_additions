@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "demithrium_ingot",
+  "key": {
+    "#": {
+      "item": "novia_additions:demithrium_ingot"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "novia_additions:demithrium_block"
+  }
+}

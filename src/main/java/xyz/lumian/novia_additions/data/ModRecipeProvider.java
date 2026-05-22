@@ -8,6 +8,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import xyz.lumian.novia_additions.Define;
 import xyz.lumian.novia_additions.block.ModBlocks;
 import xyz.lumian.novia_additions.item.ModItems;
 
@@ -50,7 +51,7 @@ public class ModRecipeProvider
                 category,
                 result.asItem())
             .unlocks("has_novium_ingot", RecipeProvider.has(ModItems.NOVIUM_INGOT))
-            .save(output, RecipeProvider.getItemName(result) + "_smithing");
+            .save(output, (Define.MOD_ID + ':' + RecipeProvider.getItemName(result) + "_smithing"));
     }
     
     public static void demithriumSmithing(final RecipeOutput   output,
@@ -66,7 +67,7 @@ public class ModRecipeProvider
                 category,
                 result.asItem())
             .unlocks("has_demithrium_ingot", RecipeProvider.has(ModItems.DEMITHRIUM_INGOT))
-            .save(output, RecipeProvider.getItemName(result) + "_smithing");
+            .save(output, (Define.MOD_ID + ':' + RecipeProvider.getItemName(result) + "_smithing"));
     }
     
     public static void nuggetRescue(final RecipeOutput   output,
@@ -84,7 +85,7 @@ public class ModRecipeProvider
                 RecipeProvider.getHasName(ingredient),
                 RecipeProvider.has(ingredient)));
             
-            builder.save(output, RecipeProvider.getSmeltingRecipeName(result));
+            builder.save(output, (Define.MOD_ID + ':' + RecipeProvider.getSmeltingRecipeName(result)));
         }
         
         {
@@ -97,8 +98,13 @@ public class ModRecipeProvider
                 RecipeProvider.getHasName(ingredient),
                 RecipeProvider.has(ingredient)));
             
-            builder.save(output, RecipeProvider.getBlastingRecipeName(result));
+            builder.save(output, (Define.MOD_ID + ':' + RecipeProvider.getBlastingRecipeName(result)));
         }
+    }
+    
+    public static String recipeName(final ItemLike obj)
+    {
+        return Define.mod(RecipeProvider.getItemName(obj)).toString();
     }
     
     //******************************************************************************************************************
@@ -112,40 +118,50 @@ public class ModRecipeProvider
     protected void buildRecipes(final RecipeOutput output, final HolderLookup.Provider lookup)
     {
         // Storage blocks
-        RecipeProvider.nineBlockStorageRecipesRecipesWithCustomUnpacking(
+        RecipeProvider.nineBlockStorageRecipes(
             output,
             RecipeCategory.MISC,            ModItems.NOVIUM_PELLET,
             RecipeCategory.BUILDING_BLOCKS, ModBlocks.NOVIUM_PELLET_BLOCK,
-            "novium_pellet_from_novium_pellet_block",
-            "novium_ingot");
-        RecipeProvider.nineBlockStorageRecipesRecipesWithCustomUnpacking(
+            (Define.MOD_ID + ":novium_pellet_from_novium_pellet_block"),
+            "novium_ingot",
+            (Define.MOD_ID + ":novium_pellet_block"),
+            null);
+        RecipeProvider.nineBlockStorageRecipes(
             output,
             RecipeCategory.MISC,            ModItems.NOVIUM_INGOT,
             RecipeCategory.BUILDING_BLOCKS, ModBlocks.NOVIUM_BLOCK,
-            "novium_block_from_novium_ingot",
-            "novium_ingot");
-        RecipeProvider.nineBlockStorageRecipesRecipesWithCustomUnpacking(
+            (Define.MOD_ID + ":novium_ingot_from_novium_block"),
+            "novium_ingot",
+            (Define.MOD_ID + ":novium_block"),
+            null);
+        RecipeProvider.nineBlockStorageRecipes(
             output,
             RecipeCategory.MISC,            ModItems.DEMITHRIUM_INGOT,
             RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEMITHRIUM_BLOCK,
-            "demithrium_block_from_demithrium_ingot",
-            "demithrium_ingot");
+            (Define.MOD_ID + ":demithrium_ingot_from_demithrium_block"),
+            "demithrium_ingot",
+            (Define.MOD_ID + ":demithrium_block"),
+            null);
         RecipeProvider.twoByTwoPacker(output, RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEMURIUM_BLOCK,
                                       ModItems.DEMURIUM_CRYSTAL);
         
         // Nuggets
-        RecipeProvider.nineBlockStorageRecipesWithCustomPacking(
+        RecipeProvider.nineBlockStorageRecipes(
             output,
             RecipeCategory.MISC, ModItems.NOVIUM_NUGGET,
             RecipeCategory.MISC, ModItems.NOVIUM_INGOT,
-            "novium_ingot_from_nuggets",
-            "novium_ingot");
-        RecipeProvider.nineBlockStorageRecipesWithCustomPacking(
+            (Define.MOD_ID + ":novium_ingot_from_nuggets"),
+            "novium_ingot",
+            (Define.MOD_ID + ":novium_nugget"),
+            null);
+        RecipeProvider.nineBlockStorageRecipes(
             output,
             RecipeCategory.MISC, ModItems.DEMITHRIUM_NUGGET,
             RecipeCategory.MISC, ModItems.DEMITHRIUM_INGOT,
-            "demithrium_ingot_from_nuggets",
-            "demithrium_ingot");
+            (Define.MOD_ID + ":demithrium_ingot_from_nuggets"),
+            "demithrium_ingot",
+            (Define.MOD_ID + ":demithrium_nugget"),
+            null);
         ModRecipeProvider.nuggetRescue(output, ModRecipeProvider.NOVIUM_NUGGET_SMELTABLES, RecipeCategory.MISC,
                                        ModItems.NOVIUM_NUGGET);
         ModRecipeProvider.nuggetRescue(output, ModRecipeProvider.DEMITHRIUM_NUGGET_SMELTABLES, RecipeCategory.MISC,
@@ -157,7 +173,7 @@ public class ModRecipeProvider
             .requires(ModItems.NOVIUM_PELLET, 2)
             .group("novium_ingot")
             .unlockedBy(RecipeProvider.getHasName(Items.NETHERITE_SCRAP), RecipeProvider.has(Items.NETHERITE_SCRAP))
-            .save(output, RecipeProvider.getSimpleRecipeName(ModItems.NOVIUM_INGOT));
+            .save(output);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.DEMITHRIUM_INGOT)
             .requires(ModItems.NOVIUM_INGOT,     4)
             .requires(ModItems.DEMURIUM_CRYSTAL, 2)
@@ -165,7 +181,7 @@ public class ModRecipeProvider
             .unlockedBy(
                 RecipeProvider.getHasName(ModItems.DEMURIUM_CRYSTAL),
                 RecipeProvider.has(ModItems.DEMURIUM_CRYSTAL))
-            .save(output, RecipeProvider.getSimpleRecipeName(ModItems.DEMITHRIUM_INGOT));
+            .save(output);
         
         // Templates
         RecipeProvider.copySmithingTemplate(output, ModItems.NOVIUM_UPGRADE_SMITHING_TEMPLATE, Items.NETHERITE_INGOT);
