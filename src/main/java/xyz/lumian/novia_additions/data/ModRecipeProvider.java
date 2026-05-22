@@ -24,10 +24,6 @@ public class ModRecipeProvider
     extends RecipeProvider
 {
     //******************************************************************************************************************
-    public static final ImmutableList<ItemLike> NOVIUM_SMELTABLES = ImmutableList.of(
-        ModItems.NOVIUM_PELLET, ModBlocks.DEEPSLATE_NOVIUM_ORE
-    );
-    
     public static final ImmutableList<ItemLike> NOVIUM_NUGGET_SMELTABLES = ImmutableList.of(
         NOVIUM_PICKAXE, ModItems.NOVIUM_AXE, ModItems.NOVIUM_HOE, ModItems.NOVIUM_SHOVEL, ModItems.NOVIUM_SWORD
     );
@@ -100,11 +96,6 @@ public class ModRecipeProvider
             
             builder.save(output, (Define.MOD_ID + ':' + RecipeProvider.getBlastingRecipeName(result)));
         }
-    }
-    
-    public static String recipeName(final ItemLike obj)
-    {
-        return Define.mod(RecipeProvider.getItemName(obj)).toString();
     }
     
     //******************************************************************************************************************
