@@ -265,7 +265,11 @@ public class ModItems
                 ModItems.DEMITHRIUM_AXE.toStack(),
                 ModItems.DEMITHRIUM_PICKAXE.toStack(),
                 ModItems.DEMITHRIUM_SHOVEL.toStack(),
-                ModItems.DEMITHRIUM_HOE.toStack()
+                ModItems.DEMITHRIUM_HOE.toStack(),
+                ModItems.TRUTHSEEKER.toStack(),
+                ModItems.MUSIC_DISC_EVOLUTION.toStack(),
+                ModItems.MUSIC_DISC_REVOLUTION.toStack(),
+                ModItems.NOVIA_BANNER_PATTERN.toStack()
             ));
         }
         else if (e.getTabKey() == CreativeModeTabs.COMBAT)
@@ -305,7 +309,8 @@ public class ModItems
                 ModBlocks.NOVIUM_PELLET_BLOCK.toStack(),
                 ModBlocks.NOVIUM_BLOCK.toStack(),
                 ModBlocks.DEMURIUM_BLOCK.toStack(),
-                ModBlocks.DEMITHRIUM_BLOCK.toStack()
+                ModBlocks.DEMITHRIUM_BLOCK.toStack(),
+                ModBlocks.GHOST_BLOCK.toStack()
             ));
         }
     }
