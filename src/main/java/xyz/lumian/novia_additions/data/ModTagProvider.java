@@ -8,13 +8,10 @@ import net.minecraft.data.tags.BannerPatternTagsProvider;
 import net.minecraft.data.tags.BiomeTagsProvider;
 import net.minecraft.data.tags.IntrinsicHolderTagsProvider;
 import net.minecraft.data.tags.TagsProvider;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
@@ -30,9 +27,7 @@ import xyz.lumian.novia_additions.world.ModBiomeTags;
 import xyz.lumian.novia_additions.world.generator.ModFeatures;
 
 import java.util.concurrent.CompletableFuture;
-import java.util.function.BiFunction;
 import java.util.stream.Stream;
-import java.util.stream.StreamSupport;
 
 
 
@@ -66,10 +61,6 @@ public class ModTagProvider
             );
             
             {
-                final BiFunction<String, Iterable<String>, Stream<TagKey<Block>>> keys = ((ns, data) -> StreamSupport
-                    .stream(data.spliterator(), false)
-                    .map(str -> BlockTags.create(ResourceLocation.fromNamespaceAndPath(ns, str))));
-                
                 //noinspection unchecked
                 Stream
                     .of(
@@ -362,11 +353,7 @@ public class ModTagProvider
                 net.minecraft.world.level.biome.Biomes.MANGROVE_SWAMP
             );
             this.tag(ModBiomeTags.HAS_NOVIUM_ORE).addTag(BiomeTags.IS_OVERWORLD);
-            this.tag(ModBiomeTags.HAS_DEMURIUM_ORE).add(
-                net.minecraft.world.level.biome.Biomes.END_HIGHLANDS,
-                net.minecraft.world.level.biome.Biomes.END_MIDLANDS,
-                net.minecraft.world.level.biome.Biomes.END_BARRENS
-            );
+            this.tag(ModBiomeTags.HAS_DEMURIUM_ORE).addTag(BiomeTags.IS_END);
         }
     }
 }
