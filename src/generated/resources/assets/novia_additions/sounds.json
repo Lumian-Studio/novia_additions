@@ -1,4 +1,20 @@
 {
+  "item.medallation.stage_indicator": {
+    "sounds": [
+      {
+        "name": "novia_additions:item/medallion/stage_indicator",
+        "volume": 0.5
+      }
+    ]
+  },
+  "item.medallation.stage_tick": {
+    "sounds": [
+      {
+        "name": "novia_additions:item/medallion/stage_tick",
+        "volume": 0.8
+      }
+    ]
+  },
   "item.truthseeker.activate": {
     "sounds": [
       {

@@ -22,6 +22,11 @@ public class ModSoundEvents
     public static final Holder<SoundEvent> ITEM_TRUTHSEEKER_ACTIVATE   = register("item.truthseeker.activate");
     public static final Holder<SoundEvent> ITEM_TRUTHSEEKER_DEACTIVATE = register("item.truthseeker.deactivate");
     
+    public static final Holder<SoundEvent> ITEM_MEDALLATION_STAGE_INDICATOR
+        = register("item.medallation.stage_indicator");
+    public static final Holder<SoundEvent> ITEM_MEDALLATION_STAGE_TICK
+        = register("item.medallation.stage_tick");
+    
     //******************************************************************************************************************
     private static Holder<SoundEvent> register(final String name)
     {

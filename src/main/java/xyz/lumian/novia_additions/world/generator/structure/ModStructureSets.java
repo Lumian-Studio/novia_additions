@@ -20,7 +20,7 @@ public class ModStructureSets
 {
     //******************************************************************************************************************
     public static final ResourceKey<StructureSet> SHRINES   = create("shrines");
-    //public static final ResourceKey<StructureSet> CATACOMBS = create("catacombs");
+    public static final ResourceKey<StructureSet> CATACOMBS = create("catacombs");
     
     //******************************************************************************************************************
     public static void bootstrap(final BootstrapContext<StructureSet> context)

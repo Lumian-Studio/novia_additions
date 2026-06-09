@@ -14,11 +14,9 @@ import net.minecraft.world.level.levelgen.structure.TerrainAdjustment;
 import net.minecraft.world.level.levelgen.structure.pools.DimensionPadding;
 import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
 import net.minecraft.world.level.levelgen.structure.structures.JigsawStructure;
-import net.minecraft.world.level.levelgen.structure.templatesystem.LiquidSettings;
 import xyz.lumian.novia_additions.Define;
 import xyz.lumian.novia_additions.world.ModBiomeTags;
 import xyz.lumian.novia_additions.world.generator.structure.pool.DemithrilShrinePools;
-import xyz.lumian.novia_additions.world.generator.structure.pool.VasquilanCatacombPools;
 
 import java.util.List;
 import java.util.Optional;
@@ -30,7 +28,7 @@ public class ModStructures
 {
     //******************************************************************************************************************
     public static final ResourceKey<Structure> SHRINE    = create("demithril_shrine");
-    //public static final ResourceKey<Structure> CATACOMBS = create("vasquilan_catacombs");//
+    public static final ResourceKey<Structure> CATACOMBS = create("vasquilan_catacombs");
     
     //******************************************************************************************************************
     public static void bootstrap(final BootstrapContext<Structure> context)

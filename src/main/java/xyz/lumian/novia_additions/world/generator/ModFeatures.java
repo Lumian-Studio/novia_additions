@@ -87,13 +87,13 @@ public class ModFeatures
                 new OreConfiguration(
                     end_stone_test,
                     ModBlocks.END_STONE_DEMURIUM_ORE.get().defaultBlockState(),
-                    1, 0.3f)));
+                    1, 0.0f)));
             context.register(ModFeatures.ORE_DEMURIUM_COVERED_CONFIGURED, new ConfiguredFeature<>(
                 Feature.SCATTERED_ORE,
                 new OreConfiguration(
                     end_stone_test,
                     ModBlocks.END_STONE_DEMURIUM_ORE.get().defaultBlockState(),
-                    2, 1f)));
+                    2, 0.5f)));
         }
     }
     

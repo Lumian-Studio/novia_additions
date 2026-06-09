@@ -10,6 +10,7 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.slf4j.Logger;
 import xyz.lumian.novia_additions.block.ModBlockEntities;
 import xyz.lumian.novia_additions.block.ModBlocks;
+import xyz.lumian.novia_additions.entity.ModEntityTypes;
 import xyz.lumian.novia_additions.item.ModArmorMaterials;
 import xyz.lumian.novia_additions.item.ModItems;
 import xyz.lumian.novia_additions.registry.ModAttachments;
@@ -37,8 +38,8 @@ public class NoviaAdditions
         ModStructureProcessors      .PROCESSORS    .register(modEventBus);
         ModBlockEntities            .BLOCK_ENTITIES.register(modEventBus);
         ModAttachments              .ATTACHMENTS   .register(modEventBus);
-        //ModStructureTypes           .TYPES         .register(modEventBus);
         ModStructurePoolElementTypes.TYPES         .register(modEventBus);
+        ModEntityTypes              .TYPES         .register(modEventBus);
         
         NeoForge.EVENT_BUS.register(this);
     }

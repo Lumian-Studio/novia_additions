@@ -60,5 +60,13 @@ public class ModSoundDefinitionProvider
                     .pitch(0.8f)
                     .volume(0.5f))
             .subtitle("subtitles.item.novia_additions.deactivate"));
+        this.add(ModSoundEvents.ITEM_MEDALLATION_STAGE_INDICATOR.value(), SoundDefinition.definition()
+            .with(SoundDefinition.Sound
+                .sound(Define.mod("item/medallion/stage_indicator"), SoundDefinition.SoundType.SOUND)
+                .volume(0.5f)));
+        this.add(ModSoundEvents.ITEM_MEDALLATION_STAGE_TICK.value(), SoundDefinition.definition()
+            .with(SoundDefinition.Sound
+                .sound(Define.mod("item/medallion/stage_tick"), SoundDefinition.SoundType.SOUND)
+                .volume(0.8f)));
     }
 }

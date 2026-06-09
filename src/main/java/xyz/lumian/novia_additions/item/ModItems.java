@@ -85,7 +85,21 @@ public class ModItems
     
     //..................................................................................................................
     public static final DeferredItem<Item> TRUTHSEEKER = register("truthseeker", (props ->
-        new TruthSeekerItem(props.stacksTo(1).rarity(Rarity.EPIC))));
+        new TruthSeekerItem(props
+            .stacksTo(1)
+            .rarity(Rarity.EPIC))));
+    
+    /*
+    public static final DeferredItem<Item> ANCIENT_MEDALLION = register("ancient_medallion", (props ->
+        new AncientMedallionItem(props
+            .durability(45))));
+    public static final DeferredItem<Item> ANGEL_MEDALLION = register("angel_medallion", (props ->
+        new AngelMedallionItem(props
+            .durability(64))));
+    public static final DeferredItem<Item> CELESTIAL_MEDALLION = register("celestial_medallion", (props ->
+        new CelestialMedallionItem(props
+            .durability(50))));
+    */
     
     //..................................................................................................................
     // NOVIUM & DEMITHRIUM STUFF
@@ -285,6 +299,11 @@ public class ModItems
                 ModItems.DEMITHRIUM_CHESTPLATE.toStack(),
                 ModItems.DEMITHRIUM_LEGGINS.toStack(),
                 ModItems.DEMITHRIUM_BOOTS.toStack()
+                
+                /*
+                ModItems.ANCIENT_MEDALLION.toStack(),
+                ModItems.ANGEL_MEDALLION.toStack()
+                 */
             ));
         }
         else if (e.getTabKey() == CreativeModeTabs.INGREDIENTS)

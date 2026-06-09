@@ -3,6 +3,7 @@ package xyz.lumian.novia_additions.item;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
@@ -54,7 +55,12 @@ public class TruthSeekerItem
     {
         final Player player = e.getEntity();
         
-        if (!player.isCreative() || !player.isCrouching())
+        if (
+            !player.isCreative()
+            || !player.isCrouching()
+            || !player.hasPermissions(1)
+            || !player.getMainHandItem().is(ModItems.TRUTHSEEKER)
+        )
         {
             return;
         }
@@ -77,8 +83,13 @@ public class TruthSeekerItem
             final String state = (next == null ? "None" : (next ? "Default Invisible" : "Default Visible"));
             splayer.displayClientMessage(Component.literal("Set entity truthseeker state to: " + state), true);
         }
+        else
+        {
+            player.playSound(SoundEvents.CANDLE_PLACE, 1.0F, 1.0F);
+        }
         
         e.setCancellationResult(InteractionResult.sidedSuccess(player.isLocalPlayer()));
+        e.setCanceled(true);
     }
     
     private static @Nullable Boolean nextState(final @Nullable Boolean current)

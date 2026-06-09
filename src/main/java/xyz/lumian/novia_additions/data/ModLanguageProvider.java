@@ -75,6 +75,12 @@ public class ModLanguageProvider
         this.add("subtitles.item.novia_additions.truthseeker.activate",   "Truthseeker activating");
         this.add("subtitles.item.novia_additions.truthseeker.deactivate", "Truthseeker deactivating");
         
+        /*
+        this.add(ModItems.ANCIENT_MEDALLION  .get(), "Ancient Medallion");
+        this.add(ModItems.ANGEL_MEDALLION    .get(), "Angel Medallion");
+        this.add(ModItems.CELESTIAL_MEDALLION.get(), "Celestial Medallion");
+        */
+        
         this.add(ModItems.NOVIUM_PICKAXE    .get(), "Novium Pickaxe");
         this.add(ModItems.DEMITHRIUM_PICKAXE.get(), "Demithrium Pickaxe");
         this.add(ModItems.NOVIUM_AXE        .get(), "Novium Axe");

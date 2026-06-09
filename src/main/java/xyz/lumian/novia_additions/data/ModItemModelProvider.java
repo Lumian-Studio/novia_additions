@@ -2,6 +2,7 @@ package xyz.lumian.novia_additions.data;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import xyz.lumian.novia_additions.Define;
@@ -18,6 +19,19 @@ public class ModItemModelProvider
     public ModItemModelProvider(final PackOutput output, final ExistingFileHelper helper)
     {
         super(output, Define.MOD_ID, helper);
+    }
+    
+    //==================================================================================================================
+    public void medallion(final ItemLike item)
+    {
+        this.handheldItem(item.asItem())
+            .transforms()
+            .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
+                .scale(0.375f)
+            .end()
+            .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
+                .scale(0.375f)
+            .end();
     }
     
     //==================================================================================================================
@@ -98,6 +112,12 @@ public class ModItemModelProvider
         this.handheldItem(ModItems.DEMITHRIUM_HOE.get());
         this.handheldItem(ModItems.DEMITHRIUM_SWORD.get());
         this.handheldItem(ModItems.DEMITHRIUM_SHOVEL.get());
+        
+        /*
+        this.medallion(ModItems.ANCIENT_MEDALLION);
+        this.medallion(ModItems.ANGEL_MEDALLION);
+        this.medallion(ModItems.CELESTIAL_MEDALLION);
+        */
         
         ModItems.ITEMS.getEntries().forEach(item -> {
             if (item.get() instanceof ArmorItem aitem)
